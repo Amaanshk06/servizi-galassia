@@ -1,4 +1,5 @@
 import './App.css';
+import { PopupProvider } from './components/PopupContext';
 import Header from './components/Header.js';
 import Banner from './components/Banner.js';
 import Usp from './components/Usp.js';
@@ -12,12 +13,13 @@ import Price from './components/Price.js';
 import Testimonials from './components/Testimonials.js';
 import Faq from './components/Faq.js';
 import Footer from './components/Footer.js';
-import EnquireNow from './components/EnquireNow.js';
+import EnquireNow from './components/EnquireFrom.js';
 
 
 function App() {
   return (
     <>
+     <PopupProvider>
       {/* header start */}
       < Header />
       {/* header end  */}
@@ -70,6 +72,7 @@ function App() {
       {/* Footer start  */}
       <Footer/>
       {/* Footer end  */}
+      </PopupProvider>
     </>
   );
 }

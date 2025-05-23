@@ -1,35 +1,50 @@
-function Price() {
-    return (
-        <>
-            <div className="price">
-                <h2>PRICE</h2>
-            </div >
-            <div className="container3">
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="price-desc">
-                            <p>Budget-friendly options with great performance. Find Laptops Under</p>
-                            <h2 className="pr">₹20,000</h2>
-                            <a className="bt1" href="">SHOP NOW</a>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="price-desc">
-                            <p>Perfect balance of affordability and power. Find Laptops Under</p>
-                            <h2 className="pr">₹30,000</h2>
-                            <a className="bt1" href="">SHOP NOW</a>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="price-desc">
-                            <p>High-performance laptops for all your needs. Find Laptops Above</p>
-                            <h2 className="pr">₹30,000</h2>
-                            <a className="bt1" href="">SHOP NOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    );
-}
+const Price = ({ className }) => {
+  return (
+    <div className={`price-container container${className || ''}`}>
+      <h2 className="price-title">PRICE</h2>
+      
+      <div className="price-grid">
+        {/* Budget Option */}
+        <div className="price-option">
+          <p className="price-description">
+            Budget-friendly options with great performance. Find Laptops Under
+          </p>
+          <p className="price-value">₹20,000</p>
+          <button 
+            className="shop-button"
+          >
+            SHOP NOW
+          </button>
+        </div>
+        
+        {/* Mid-range Option */}
+        <div className="price-option">
+          <p className="price-description">
+            Perfect balance of affordability and power. Find Laptops Under
+          </p>
+          <p className="price-value">₹30,000</p>
+          <button 
+            className="shop-button"
+          >
+            SHOP NOW
+          </button>
+        </div>
+        
+        {/* High-end Option */}
+        <div className="price-option">
+          <p className="price-description">
+            High-performance laptops for all your needs. Find Laptops Above
+          </p>
+          <p className="price-value">₹30,000</p>
+          <button 
+            className="shop-button"
+          >
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default Price;

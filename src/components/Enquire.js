@@ -1,38 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+// EnquireNowPopup.js
+import React from 'react';
+import { usePopup } from './PopupContext';
 
 const EnquireNowPopup = () => {
-  const [visible, setVisible] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const timeoutRef = useRef(null);
-
-  // Show popup 5 seconds after page load
-  useEffect(() => {
-    timeoutRef.current = setTimeout(() => {
-      setVisible(true);
-    }, 5000);
-
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
-
-  const startReopenTimer = () => {
-    if (!submitted) {
-      timeoutRef.current = setTimeout(() => {
-        setVisible(true);
-      }, 20000);
-    }
-  };
-
-  const handleClose = () => {
-    setVisible(false);
-    clearTimeout(timeoutRef.current);
-    startReopenTimer();
-  };
+  const { visible, closePopup, submitPopup } = usePopup();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setVisible(false);
-    setSubmitted(true); // Prevent further popups
-    clearTimeout(timeoutRef.current);
+    submitPopup();
   };
 
   return (
@@ -46,15 +21,15 @@ const EnquireNowPopup = () => {
       >
         <div className="popup-header">
           <h2 id="enquire-now-title">ENQUIRE NOW</h2>
-          <button className="close-btn" onClick={handleClose} aria-label="Close popup">
+          <button className="close-btn" onClick={closePopup} aria-label="Close popup">
             &times;
           </button>
         </div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Company Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="tel" placeholder="Phone number" />
-          <input type="text" placeholder="Messages" />
+        <form className='enquire-form' onSubmit={handleSubmit}>
+          <input className="enquire-input" type="text" placeholder="Company Name" required />
+          <input className="enquire-input" type="email" placeholder="Email Address" required />
+          <input className="enquire-input" type="tel" placeholder="Phone number" required />
+          <input className="enquire-input" type="text" placeholder="Messages" />
           <button className="chat enquire-btn" type="submit">SUBMIT NOW</button>
         </form>
       </div>

@@ -188,6 +188,7 @@ header.scrolled .pulse-border {
   background-color: white;
   color: red;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .txt p {
@@ -670,6 +671,54 @@ p {
 }
 
 /* Video end  */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enquire-input[type="text"],
+.enquire-input[type="email"],
+.enquire-input[type="tel"] {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 14px;
+  padding: 8px 12px;
+  outline: none;
+}
+
+.enquire-input::placeholder {
+  color: white;
+}
+
+.enquire-input:focus {
+  outline: 1px solid white;
+}
+
+.enquire-btn {
+  border: .5px solid #000000
+}
+
+.enquire-btn[type="submit"] {
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 16px;
+  cursor: pointer;
+  align-self: center;
+  letter-spacing: 0.05em;
+}
+
+.enquire-btn:hover {
+  background: linear-gradient(98deg, #FF1A0D, #a31e17);
+  color: #fff;
+  transition: all 0.4s;
+}
+
+/* ______________________________________________ENQUIRE SECTION CSS END*/
 
 /* Categories start  */
 .trending {
@@ -796,6 +845,7 @@ p {
   color: #ffffff;
   padding: 5px 12px;
 }
+
 .text button:hover {
   background: white;
   color: #a31e17;
@@ -835,8 +885,9 @@ p {
 .swiper-pagination-bullet-active {
   background-color: #ff5a5f;
 }
+
 .categories-swiper,
-.categories-swiper  {
+.categories-swiper {
   cursor: default !important;
 }
 
@@ -974,69 +1025,70 @@ strong {
 /* Brand end  */
 
 /* Price start  */
-.container3 {
-  width: 1200px;
-   margin-left: 150px; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  position: relative;
-}
 
-.price {
+.price-container {
   width: 100%;
-  margin: auto;
-  padding: 6vw 0 2.4vw;
+  padding: 4rem 1rem;
+}
+
+.price-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #403E43;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.price-option {
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.price h2 {
-  text-align: center;
-  font-size: 63px;
-  font-weight: 400;
-  height: 4.6vw;
-  margin-bottom: 20px;
+.price-description {
+  color: #403E43;
+  margin-bottom: 0.5rem;
 }
 
-.price-desc {
-  border: 1px solid #0000008c;
-  color: #4a4a4a;
-  text-align: center;
-  width: 350px;
-  height: 200px;
-  margin-left: 40px;
-  padding: 30px;
-}
-
-.price-desc p {
-  font-size: 16px;
-  margin: 0 20px 0 20px;
-}
-
-.pr {
+.price-value {
   font-size: 26px;
-  font-weight: 600;
-  color: #f03227;
-  padding-top: 4px;
-  padding-bottom: 20px;
+    font-weight: 600;
+    color: #f03227;
+  margin: 1rem 0;
 }
 
-.bt1 {
-  font-size: 12px;
-  text-decoration: none;
-  border: 1px solid #a31e17;
+.shop-button {
   background: linear-gradient(98deg, #FF1A0D, #a31e17);
   color: white;
-  font-weight: 600;
-  padding: 7px 14px 7px 14px;
+  padding: 0.3rem 0.7rem;
+  font-size: 12px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
 }
 
-.bt1:hover {
-  background: white;
-  color: red;
-  transition: 0.4s;
+.shop-button:hover {
+  background: #fff;
+  border: 1px solid #a31e17;
+  color: red;}
+
+@media (min-width: 768px) {
+  .price-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Price end  */
@@ -1163,7 +1215,7 @@ input[type="tel"] {
   border: 1px solid white;
   color: white;
   font-size: 14px;
-  padding: 8px 12px;
+  padding: 15px 12px;
   outline: none;
 }
 
@@ -1362,6 +1414,126 @@ input:focus {
 /* Testimonial end  */
 
 /* EnquireNow start  */
+/* ENQUIRY FORM SECTION START */
+
+.enquiry-div {
+  background: linear-gradient(132deg, #FF1A0D, #a31e17);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.containerF {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  padding: 3rem 1.5rem 6rem;
+}
+
+.enquire-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.enquiry-title {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+
+/* @media (min-width: 640px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .title {
+    font-size: 6rem;
+  }
+} */
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem 1.8rem;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.enquiry-input {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  outline: none;
+}
+
+.enquiry-input::placeholder {
+  color: white;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.enquiry-input:focus {
+  outline: 1px solid white;
+  outline-offset: 0;
+}
+
+.submit-wrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.enquiry-btn {
+  background: white;
+  color: #363535;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.60rem 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 2vw;
+  letter-spacing: 0.05em;
+}
+
+.enquiry-btn:hover {
+  color: #fff;
+  border: 0px solid red;
+  background: red;
+  
+}
+
+.decorative-square {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6rem;
+  height: 6rem;
+  background-color: #b71c1c;
+  transform: rotate(45deg) translate(3rem, 3rem);
+  pointer-events: none;
+}
+
+
+/* ENQUIRY FORM SECTION END */
 
 /* EnquireNow end  */
 
@@ -1425,7 +1597,7 @@ input:focus {
 .answer {
   margin: 0;
   font-size: 20px;
-  
+
 }
 
 /* Faq end  */

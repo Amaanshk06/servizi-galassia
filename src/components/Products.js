@@ -59,7 +59,7 @@ function Products() {
   
     return (
         <>
-            <div className="b-color">
+            <div className="b-color" id='products-section'>
                 <div className="bsp">
                     <p>Products</p>
                     <h2>BEST SELLING PRODUCTS</h2>

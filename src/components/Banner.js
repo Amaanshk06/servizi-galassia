@@ -1,21 +1,33 @@
 function Banner() {
     return (
         <>
-           <div className="banner">
-           <img className="banner-img" src="assets/images/banner-img/banner-img.webp" />
-            <div className="banner-content">
-                <div className="bounce">
-                    <img className="laptop-image" src="assets/images/banner-img/laptop.webp" />
+            <div className="banner">
+                <picture>
+                    {/* Mobile Banner */}
+                    <source
+                        media="(max-width: 768px)"
+                        srcSet="/assets/images/banner-img/banner-mobile.webp"
+                    />
+                    {/* Default Banner (Desktop) */}
+                    <img
+                        className="banner-img"
+                        src="/assets/images/banner-img/banner-img.webp"
+                        alt="Banner"
+                    />
+                </picture>
+                <div className="banner-content">
+                    <div className="bounce">
+                        <img className="laptop-image" src="assets/images/banner-img/laptop.webp" />
+                    </div>
+                    <h1 className="heading-02">Affordable & Trusted <br />  That's SG! </h1>
+                    <p className="p1">Your Partner in Quality Without Compromise!</p>
+                    <p className="p2">Hassle-Free 1-Year Warranty <br />  Affordable Prices, No Hidden Costs <br />  Quick Support, Always Ready</p>
                 </div>
-                <h1 className="heading-02">Affordable & Trusted <br />  That's SG! </h1>
-                <p className="p1">Your Partner in Quality Without Compromise!</p>
-                <p className="p2">Hassle-Free 1-Year Warranty <br />  Affordable Prices, No Hidden Costs <br />  Quick Support, Always Ready</p>
+                <div className="btn">
+                    <a className="a1" href="">SHOP NOW</a>
+                    <a className="a2" href="">CHAT NOW</a>
+                </div>
             </div>
-            <div className="btn">
-                <a className="a1" href="">SHOP NOW</a>
-                <a className="a2" href="">CHAT NOW</a>
-            </div>
-           </div>
         </>
     );
 }

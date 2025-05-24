@@ -2,7 +2,7 @@ function About  ()
 
 {
   return (
-    <div className="about">
+    <div className="about" id="aboutus-section">
         <div className="containerA">
         <img
             src="https://storage.googleapis.com/a1aa/image/dc1de2cb-e095-40c1-1830-e58b518a4d18.jpg"

@@ -18,7 +18,7 @@ const Categories = () => {
   // }, []);
 
   return (
-    <section className="trending">
+    <section className="trending" id="categories-section">
       <h3>CATEGORIES</h3>
       <h2 className="heading">TRENDING CATEGORIES</h2>
       <Swiper

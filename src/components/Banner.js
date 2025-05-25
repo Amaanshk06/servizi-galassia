@@ -1,4 +1,13 @@
+import React, { useState } from 'react';
+import Chatbot from './Chatbot';
+
 function Banner() {
+      const [showChat, setShowChat] = useState(false)
+     const handleScrollToProducts = (e) => {
+        e.preventDefault();
+        const section = document.getElementById("products-section");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
     return (
         <>
             <div className="banner">
@@ -23,10 +32,11 @@ function Banner() {
                     <p className="p1">Your Partner in Quality Without Compromise!</p>
                     <p className="p2">Hassle-Free 1-Year Warranty <br />  Affordable Prices, No Hidden Costs <br />  Quick Support, Always Ready</p>
                 </div>
-                <div className="btn">
-                    <a className="a1" href="">SHOP NOW</a>
-                    <a className="a2" href="">CHAT NOW</a>
+                <div className="banner-button">
+                    <a className="shop-btn" href="products-section" onClick={handleScrollToProducts}>SHOP NOW</a>
+                    <a className="chat-btn" href="#" onClick={(e) => { e.preventDefault(); setShowChat(true); }}>CHAT NOW</a>
                 </div>
+                {showChat && <Chatbot onClose={() => setShowChat(false)} />}
             </div>
         </>
     );

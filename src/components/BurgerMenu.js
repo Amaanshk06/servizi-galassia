@@ -18,15 +18,15 @@ const BurgerMenu = () => {
                     CLOSE
                 </a>
                 <div className="overlay-content">
-                    <a href="#">USP </a>
-                    <a href="#">Products</a>
-                    <a href="#">Video</a>
-                    <a href="#">Categories</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Shop By</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">FAQ's</a>
+                    <a href="#usp" onClick={closeNav}>USP </a>
+                    <a href="#products-section" onClick={closeNav}>Products</a>
+                    <a href="#video" onClick={closeNav}>Video</a>
+                    <a href="#categories-section" onClick={closeNav}>Categories</a>
+                    <a href="#aboutus-section" onClick={closeNav}>About Us</a>
+                    <a href="#shopby" onClick={closeNav}>Shop By</a>
+                    <a href="#testimonials" onClick={closeNav}>Testimonials</a>
+                    <a href="#contactus" onClick={closeNav}>Contact Us</a>
+                    <a href="#faq" onClick={closeNav}>FAQ's</a>
                 </div>
             </div>
             <span

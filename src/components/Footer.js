@@ -8,7 +8,7 @@ function Footer() {
                     <img
                         src="/assets/images/header-img/logo 512.png"
                         alt="Red square logo with white text A&T SERVICES INC"
-                        className="logo"
+                        className="flogo"
                         width="60"
                         height="60"
                     />
@@ -21,11 +21,11 @@ function Footer() {
                     </div>
                 </div>
 
-                <hr/>
+                <hr />
 
                 <p className="mb-4">
-                    <span className="bold">Head Office:</span> E-246/1, Allama Shibli Nomani Road,
-                    Abul Fazal Enclave, Shaheen Bagh, Jasola Vihar, New Delhi, Delhi 110025
+                    <span className="bold">Head Office Rome:</span><br />
+                    351 Via del Quadraro, 00174 Roma, Lazio, Italy
                 </p>
 
                 <p className="mb-4 bold">Branches:</p>
@@ -33,31 +33,28 @@ function Footer() {
                 <div className="flex-row">
                     <div className="column">
                         <p className="mb-4">
-                            <span className="bold">Delhi:</span><br />
-                            G-167, Ground Floor, Hari Nagar Jail Road Street, 1, Mother Dairy Road,
-                            New Delhi, Delhi 110058
+                            <span className="bold">Rome:</span><br />
+                            351 Via del Quadraro, 00174 Roma, Lazio, Italy
                         </p>
                         <p className="mb-4">
-                            <span className="bold">Bangalore:</span><br />
-                            29 Roshan Nagar 3rd Cross, Near Salmaniya Masjid, Deepanjali Nagar,
-                            Bangalore, Karnataka - 560026, India
+                            <span className="bold">Milan:</span><br />
+                            39 Via privata Tarvisio, 20125 Milano, Lombardia, Italy
                         </p>
-                        <p className="mb-1"><span className="bold">Phone:</span> +91 87 7992 3972</p>
-                        <p><span className="bold">Email:</span> support@antservicesmail.com</p>
+                        <p className="mb-1"><span className="bold">Phone:</span> +39 02 12345678</p>
+                        <p><span className="bold">Email:</span> support@xyz.com</p>
                     </div>
                     <div className="column">
                         <p className="mb-4">
-                            <span className="bold">Mumbai:</span><br />
-                            Plot No. 70, AL-Hudibia Apartment, Opp Bharat Gear, Kausa, Mumbra,
-                            Thane, Maharashtra, India – 400612
+                            <span className="bold">Florence:</span><br />
+                            24 Quartiere Aurelia, 20051 Cassina de' Pecchi, Milano, Lombardia, Italy
                         </p>
                         <p>
-                            <span className="bold">Hyderabad:</span><br />
-                            Plot No. 761, Road No. 39, CBI Colony, Jubilee Hills, Hyderabad,
-                            Telangana, India - 500033
+                            <span className="bold">Naples:</span><br />
+                            22 Strada della Trinità, 10032 Torino, Piemonte, Italy
                         </p>
                     </div>
                 </div>
+
 
                 <hr />
 

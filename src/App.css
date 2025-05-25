@@ -24,7 +24,7 @@ body {
 
 
 /* Header start  */
-.logo {
+.header-logo {
   height: 60px;
   margin-top: 8px;
   margin-left: 40px;
@@ -43,11 +43,14 @@ header.scrolled {
   box-shadow: 0 1px 6px 0 #00000036;
 }
 
-header.scrolled .num a {
+header.scrolled .header-num a {
   color: #909090;
 }
 
-header.scrolled .plus-sign {
+header.scrolled .plus-sign1 {
+  color: #909090;
+}
+header.scrolled .plus-sign2 {
   color: #909090;
 }
 
@@ -58,13 +61,13 @@ header.scrolled .menu span {
   fill: #909090;
 }
 
-header.scrolled .enquire-button {
+header.scrolled .header-enquire-button {
   background-color: transparent;
   color: #909090;
   border: 1px solid red;
 }
 
-header.scrolled .enquire-button:hover {
+header.scrolled .header-enquire-button:hover {
   color: #fff;
   border: 1px solid red;
   background: red;
@@ -76,13 +79,13 @@ header {
   z-index: 3;
 }
 
-.head {
+.header-head {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
 }
 
-.head nav {
+.header-head nav {
   margin-left: 80px;
   margin-top: 25px;
   text-align: center;
@@ -90,7 +93,7 @@ header {
   transition: color 0.3s ease;
 }
 
-.head nav a {
+.header-head nav a {
   text-decoration: none;
   margin: 15px;
   color: rgb(0, 0, 0);
@@ -100,7 +103,7 @@ nav a:hover {
   color: red;
 }
 
-.txt {
+.header-txt {
   display: flex;
   flex-wrap: wrap;
   margin-top: 35px;
@@ -109,13 +112,13 @@ nav a:hover {
   text-align: center;
 }
 
-.txt a {
+.header-txt a {
   text-decoration: none;
   color: #ffffff;
   margin-right: 15px;
 }
 
-.num a img {
+.header-num a img {
   margin-right: 15px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
@@ -180,7 +183,7 @@ header.scrolled .pulse-border {
   }
 }
 
-.enquire-button {
+.header-enquire-button {
   border: 1px solid rgb(255, 255, 255);
   height: 40px;
   align-content: center;
@@ -190,14 +193,14 @@ header.scrolled .pulse-border {
   padding: 1px 15px;
 }
 
-.enquire-button:hover {
+.header-enquire-button:hover {
   background-color: white;
   color: red;
   transition: 0.4s;
   cursor: pointer;
 }
 
-.txt p {
+.plus-sign1,.plus-sign2 {
   color: rgb(255, 255, 255);
 }
 
@@ -293,18 +296,18 @@ p {
   font-size: 25px;
 }
 
-.btn {
+.banner-button {
   position: relative;
   margin-top: 30px;
 }
-
-.btn a {
+.banner-button a {
+  outline: none;
   font-size: 16px;
   text-decoration: none;
   padding: 10px 20px;
 }
 
-.a1 {
+.shop-btn {
   border: 1px solid red;
   background: linear-gradient(98deg, #FF1A0D, #a31e17);
   color: white;
@@ -312,20 +315,20 @@ p {
   margin-left: 80px
 }
 
-.btn .a1:hover {
+ .shop-btn:hover {
   background: white;
   color: red;
   transition: 0.4s;
 }
 
-.a2 {
+.chat-btn {
   border: 1px solid black;
   color: black;
   font-weight: 600;
   margin-left: 20px;
 }
 
-.btn .a2:hover {
+.chat-btn:hover {
   background: linear-gradient(98deg, #FF1A0D, #a31e17);
   color: #fff;
   transition: 0.4s;
@@ -360,6 +363,82 @@ p {
 }
 
 /* banner end  */
+
+.chatbot-overlay {
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 420px;              /* increased from 320px */
+  max-height: 600px;         /* increased from 500px */
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  border-radius: 10px;
+}
+
+
+
+
+.chatbot-box {
+  padding: 15px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.chat-scroll {
+  max-height: 500px;         /* match new height minus header */
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+.chat-question {
+  font-weight: bold;
+  color: #FF1A0D;
+  margin: 6px 0;
+}
+
+.chat-answer {
+  color: #333;
+  margin: 6px 0;
+}
+
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chatbot-btn {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chatbot-btn:hover {
+  background: linear-gradient(98deg, #FF1A0D, #a31e17);
+  color: #fff;
+}
+
+.bot-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #888;
+}
+
 
 /* USP start  */
 .usp {
@@ -997,7 +1076,7 @@ strong {
   margin: 20px 0 50px 0;
 }
 
-.b1 {
+.brand-btn {
   font-size: 12px;
   text-decoration: none;
   border: 1px solid #a31e17;
@@ -1007,7 +1086,7 @@ strong {
   padding: 5px 10px 5px 10px;
 }
 
-.b1:hover {
+.brand-btn:hover {
   background: white;
   color: red;
   transition: 0.4s;
@@ -1614,7 +1693,7 @@ footer {
 }
 
 .container1 {
-  max-width: 1400px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 24px 24px 32px 24px;
 }
@@ -1624,10 +1703,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-
 }
 
-.logo {
+.flogo {
   width: 60px;
   height: 60px;
   object-fit: contain;
@@ -1637,6 +1715,7 @@ footer {
   color: #5a7a6a;
   text-decoration: none;
   margin-left: 12px;
+  margin-right: 5px;
   font-size: 14px;
   display: inline-block;
   vertical-align: middle;
@@ -1648,7 +1727,7 @@ footer {
 
 hr {
   border: none;
-  border-top: 1px solid #0f0f0f;
+  border-top: 1px solid #d9d9d9;
   margin: 16px 0;
 }
 
@@ -1696,7 +1775,6 @@ hr {
   body {
     overflow-x: hidden;
   }
-}
 /* banner start  */
 .mobile-banner-img {
   position: absolute;
@@ -1706,4 +1784,336 @@ hr {
   margin-top: -90px;
   top: 13%;
 }
+}
 /* banner end  */
+/* **************************RESPONSIVENESS */
+
+@media (max-width: 480px) {
+
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* .container {
+    width: 1100px;
+  } */
+  
+  /* ************************************************header start */
+  
+  .mobile-hide {
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    .mobile-hide {
+      display: none;
+    }
+  }
+
+  /* ************************************************header start */
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    /* background-color: #ffffff; */
+  }
+  
+  header.scrolled {
+    background-color: white;
+    color: #1a202c;
+    box-shadow: 0 1px 6px 0 #00000036;
+  }
+  
+  .logo {
+    height: 30px;
+    margin: 15px 0 15px 30px;
+  }
+  
+  nav {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 10px 0 10px 15px;
+    color: black;
+  }
+  
+  nav a:hover {
+    color: #ff0000;
+  }
+  
+  .txt {
+    position: absolute;
+    top: 20px;
+    right: 320px;
+  }
+  
+  .call a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  header.scrolled .call a {
+    color: #909090;
+  }
+  
+  .call img {
+    padding: 10px;
+    margin: 15px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #a31e17;
+  }
+  
+  .pulse-border {
+    background-color: white;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+  
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    }
+  
+    50% {
+      box-shadow: 0 0 10px 6px rgb(255, 255, 255);
+    }
+  }
+  
+  header.scrolled .pulse-border {
+    background-color: white;
+    /* Keep center white */
+    animation: pulse-black 1s infinite;
+  }
+  
+  /* Black pulse keyframes */
+  @keyframes pulse-black {
+  
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgb(0, 0, 0);
+    }
+  
+    50% {
+      box-shadow: 0 0 10px 6px rgb(0, 0, 0);
+    }
+  }
+  
+  .contact {
+    text-decoration: none;
+  }
+  
+  .nav-divider1 {
+    position: absolute;
+    top: 20px;
+    left: 210px;
+    color: #fff;
+  }
+  
+  header.scrolled .nav-divider1 {
+    color: #909090;
+  }
+  
+  .nav-divider2 {
+    position: absolute;
+    top: 20px;
+    left: 370px;
+    color: #fff;
+  }
+  
+  header.scrolled .nav-divider2 {
+    color: #909090;
+  }
+  
+  .enquire-button {
+    position: absolute;
+    top: 14px;
+    left: 240px;
+    width: 110px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .enquire-button:hover {
+    background-color: white;
+    color: red;
+    transition: all 0.4s;
+  }
+  
+  header.scrolled .enquire-button {
+    color: #909090;
+    border: 1px solid #ff0000;
+  }
+  
+  header.scrolled .enquire-button:hover {
+    color: #fff;
+    border: 1px solid #ff0000;
+    background: #ff0000;
+  }
+  
+  .menu {
+    position: absolute;
+    left: 220px;
+    top: 0px;
+  }
+  
+  header.scrolled .menu {
+    color: #909090;
+  }
+  
+  /* overlay menu start */
+  
+  .overlayM {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: -400px;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlayM.open {
+    width: 100%;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .overlayM a {
+    position: relative;
+    top: 100px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlayM a:hover,
+  .overlayM a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlayM .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 550px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* overlay menu end */  
+
+/* ***********************************************header end */
+
+/* **************************************************Banner section start */
+
+.mobile-banner-image {
+  position: absolute;
+  z-index: 0;
+  background-size: cover;
+  width: 100%;
+  margin-top: -90px;
+  top: 13%;
+}
+
+.laptop-image {
+  position: absolute;
+  right: 18vw;
+  top: 7vw;
+  width: 36vw;
+  animation: float 3s ease-in-out infinite, fadeIn .5s ease-in-out forwards;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.banner-content {
+  position: relative;
+  top: 80px;
+  left: 50px;
+}
+
+.banner-content h1 {
+  font-size: 49px;
+}
+
+.banner-content p {
+  font-size: 28px;
+}
+
+.banner-button {
+  position: relative;
+  top: 150px;
+  left: 50px;
+}
+
+.banner-button a {
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.shop-btn {
+  background: linear-gradient(132deg, #FF1A0D, #a31e17);
+  border: .5px solid #a31e17;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.shop-btn:hover {
+  background: #ffffff;
+  color: #ff0000
+}
+
+.chat-btn {
+  border: .5px solid #000;
+  background: #ffffff;
+  color: #ff0000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.chat-btn:hover {
+  background: linear-gradient(132deg, #FF1A0D, #a31e17);
+  color: #fff;
+  border: .1px solid #a31e17;
+  transition: all 0.4s;
+}
+
+/* *******************************************************Banner Section End */
+  
+}

@@ -2,7 +2,7 @@
 
 function EnquiryForm() {
     return (
-    <div className="enquiry-div">
+    <div className="enquiry-div" id="contactus">
       <div className="containerF">
         <h6 className="enquiry-label">ENQUIRE NOW</h6>
         <h1 className="enquiry-title">WRITE A MESSAGE TO US</h1>

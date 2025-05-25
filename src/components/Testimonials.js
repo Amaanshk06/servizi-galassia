@@ -78,7 +78,7 @@ const Testimonials = () => {
     };
   }, []);
   return (
-    <div className='testimonials'>
+    <div className='testimonials' id='testimonials'>
       <div className='container6'>
         <div className="testimonials-section">
           <p>Customer's</p>

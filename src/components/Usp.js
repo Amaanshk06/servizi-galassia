@@ -83,7 +83,8 @@ function Usp() {
 
     return (
         <>
-            <div className="usp">
+            <section id='usp'>
+                            <div className="usp">
                 <img ref={imgRef1} className="usp-object1" src="assets/images/usp-img/object-03.svg" alt="object1" />
                 <img ref={imgRef2} className="usp-object2" src="assets/images/usp-img/object-02.svg" alt="object2" />
                 <p>Unique Selling Proposition</p>
@@ -117,6 +118,7 @@ function Usp() {
                     </Swiper>
                 </div>
             </div>
+            </section>
         </>
     );
 }

@@ -13,6 +13,7 @@ function Video() {
       <div
         className="video-section"
         style={{ backgroundImage: `url(${thumbnailUrl})` ,backgroundSize:'cover' }}
+        id='video'
       >
         <button className="play-button" onClick={openModal}>
           <img

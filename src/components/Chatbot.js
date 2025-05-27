@@ -191,7 +191,7 @@ function Chatbot({ onClose }) {
         <button className="bot-close-btn" onClick={onClose}>
           ✖
         </button>
-        <h3>Chat With Ust</h3>
+        <h3>Chat With Us</h3>
         <div className="chat-scroll">
           {messages.map((msg, idx) => (
             <p

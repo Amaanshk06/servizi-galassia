@@ -13,8 +13,8 @@ function Banner() {
             <div className="banner">
                 <picture>
                     {/* Mobile Banner */}
-                    <source
-                        media="(max-width: 768px)"
+                    <source 
+                        media="(max-width: 768px)" 
                         srcSet="/assets/images/banner-img/banner-mobile.webp"
                     />
                     {/* Default Banner (Desktop) */}

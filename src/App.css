@@ -2278,7 +2278,7 @@ hr {
     }
   }
 
-  .banner-img {
+  .banner-img.banner-mobile {
     position: absolute;
     z-index: 0;
     background-size: cover;
@@ -2856,11 +2856,11 @@ hr {
   /* FAQ */
    .faq-container {
     max-width: 100%;
-    padding: 15px;
+    padding: 10px;
   }
 
   .faq-title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-bottom: 16px;
     text-align: center;
   }
@@ -2875,17 +2875,18 @@ hr {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: rem;
+    font-size: 1rem;
     padding: 12px 0;
     outline: none;
     -webkit-tap-highlight-color: transparent;
   }
 
   .question-text {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     gap: 5px;
     flex: 1;
+    font-size: 1rem;
     user-select: none;
   }
 
@@ -2898,7 +2899,7 @@ hr {
     font-size: 1.2rem;
     color: #333;
     flex-shrink: 0;
-    margin-left: 10px;
+    margin-left: 8px;
     user-select: none;
   }
 
@@ -2922,372 +2923,226 @@ hr {
 
   /* Footer */
   .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .flex-row {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .column {
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
   }
 
   .flogo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .social-icons a {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .bold {
+    width: 48%;
+    margin-bottom: 6px;
+    font-size: 13px;
   }
 
   .footer-bottom {
-    font-size: 12px;
-    flex-direction: column;
+    font-size: 11px;
+    gap: 6px;
+    padding: 8px 10px;
   }
 
-  .mobile-hide {
-    display: none !important;
+  .footer-bottom p,
+  .footer-bottom a,
+  .footer-bottom span {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .container1 {
+    padding: 0 12px;
+  }
+
+  .column {
+    flex: 0 0 100%;
   }
 }
 
-/* =================== MOBILE RESPONSIVE STYLES =================== */
 @media (max-width: 768px) {
-
-  body {
-    font-size: 0.9em;
-  }
-
+  /* === Container === */
   .container {
-    padding: 0 10px;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 auto;
   }
 
+  /* === Header === */
   header {
-    position: fixed;
+    padding: 6px 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    height: 28px;
   }
 
   .header-head {
     flex-direction: column;
-    align-items: center;
-    margin: 0;
+    margin: 15px 0 10px 0;
+  }
+
+  .menu {
+    left: 180px;
+    top: 20px;
   }
 
   .header-head nav {
-    margin: 10px 0;
-    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
   }
 
   .header-head nav a {
-    margin: 8px;
-    display: inline-block;
-  }
-
-  .header-logo {
-    margin: 10px auto;
-    height: 50px;
-  }
-
-  .header-txt {
-    margin: 10px auto;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .header-num a img {
-    margin: 0 auto;
+    margin: 10px;
   }
 
   .header-enquire-button {
-    margin: 10px auto;
-    display: block;
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
-  .laptop-image {
-    display: none;
-    /* Hide large floating image on mobile */
+  /* === Banner === */
+  .banner {
+    margin-top: 120px;
   }
 
   .heading-02 {
-    font-size: 32px;
-    margin: 50px 20px 10px 20px;
-    text-align: center;
+    margin-top: 100px;
+    font-size: 28px;
   }
 
   .p1,
   .p2 {
-    font-size: 18px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
+    font-size: 16px;
   }
 
-  .banner-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
+  .banner-button a {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 
-  .shop-btn,
-  .chat-btn {
-    margin: 10px 0;
-    width: 80%;
-    text-align: center;
+  .laptop-image {
+    display: none !important;
   }
 
-  .chatbot-overlay {
-    width: 95%;
-    right: 2.5%;
-    bottom: 10px;
-    max-height: 90vh;
-  }
-
-  .chat-scroll {
-    max-height: 60vh;
-  }
-
-  .usp {
-    margin-top: 100px;
-    padding: 0 15px;
-  }
-
+  /* === USP Section === */
   .usp h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 28px;
+    margin-bottom: 30px;
   }
 
   .usp p {
-    font-size: 18px;
-  }
-
-  .usp-object1,
-  .usp-object2 {
-    display: none;
-  }
-
-  .slider-item {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .overlayM .closebtn {
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-  }
-
-  .card {
-    height: auto;
-    margin: 15px 10px;
-  }
-
-  .cards img {
-    width: 100%;
-    height: auto;
-  }
-
-  .bsp h2 {
-    font-size: 30px;
-  }
-
-  .btn-km button {
-    margin-bottom: 40px;
-    font-size: 12px;
-  }
-
-  .trending h2 {
-    font-size: 7vw;
-  }
-
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6,
-  .card7,
-  .card8 {
-    height: 200px;
-    background-position: center;
-  }
-
-  .text h3 {
     font-size: 16px;
-    margin-top: 40px;
-    padding-left: 20px;
   }
 
-  .text button {
-    font-size: 10px;
-    margin-left: 20px;
+  /* === Cards (Product/Categories) === */
+  .trending .card1,
+  .trending .card2,
+  .trending .card3,
+  .trending .card4,
+  .trending .card5,
+  .trending .card6,
+  .trending .card7,
+  .trending .card8 {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
 
+  /* === About Section === */
   .about {
-    padding: 15px;
+    padding: 12px;
   }
 
-  .image {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-size: 34px;
-    line-height: 1.2;
+  .about h1 {
+    font-size: 28px;
   }
 
   .aboutp {
-    font-size: 16px;
-  }
-
-  .brand h2 {
-    font-size: 44px;
-  }
-
-  .shop-card-brands img {
-    height: 80px;
-  }
-
-  .price-title {
-    font-size: 34px;
-  }
-
-  .popup {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .popup-header h2 {
-    font-size: 18px;
-  }
-
-  .enquire-btn[type="submit"] {
     font-size: 14px;
-    padding: 6px 12px;
   }
 
-  .video-section {
-    padding-top: 56.25%;
-    /* Maintain 16:9 ratio */
+  .about-btn {
+    font-size: 12px;
   }
 
-  .play-icon {
-    height: 60px;
+  /* === Brand Section === */
+  .brand h2 {
+    font-size: 30px;
   }
 
-  /* Testimonials */
-  .container6 {
-    width: 100%;
-    padding: 40px 15px;
+  .brand-btn {
+    font-size: 10px;
   }
 
-  .testimonials-section {
-    padding: 20px 10px;
-  }
-
+  /* === Testimonials === */
   .testimonials-section h2 {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: 1.3rem;
   }
 
   .testimonial-card {
-    padding: 20px;
     height: auto;
+    padding: 15px;
   }
 
   .feedback {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .rating {
-    font-size: 18px;
-    margin-left: 0;
+    font-size: 14px;
   }
 
-  .testimonial-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .testimonial-image {
-    margin: 0 auto 10px auto;
-  }
-
-  .name {
-    font-size: 1rem;
-  }
-
-  /* EnquireNow */
-  .enquiry-title {
-    font-size: 2rem;
-    line-height: 1.3;
-    margin-bottom: 2rem;
-  }
-
-  .form {
-    grid-template-columns: 1fr;
-  }
-
-  .enquiry-btn {
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 1.5rem;
-  }
-
-  .decorative-square {
-    width: 3rem;
-    height: 3rem;
-    transform: rotate(45deg) translate(2rem, 2rem);
-  }
-
-  /* FAQ */
+  /* === FAQ Section === */
   .faq-title {
-    font-size: 2rem;
-    padding: 0 10px;
+    font-size: 1.25rem;
   }
 
   .question {
-    font-size: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
   }
 
   .answer {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  /* Footer */
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  /* === Footer === */
+  .footer-bottom {
+    flex-direction: row;
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom a,
+  .footer-bottom span {
+    font-size: 10px;
+  }
+
+  .bold {
+    width: 48%;
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
   }
 
   .flogo {
-    width: 50px;
-    height: 50px;
-  }
-
-  .flex-row {
-    flex-direction: column;
-  }
-
-  .column {
-    width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
-    flex-direction: column;
-  }
-
-  .mobile-hide {
-    display: none;
+    width: 40px;
+    height: 40px;
   }
 }

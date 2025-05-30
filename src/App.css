@@ -1774,12 +1774,8 @@ hr {
   text-decoration: underline;
   color: #2e2e2e;
 }
-
-.mobile-hide {
-  display: block;
-}
-
 /* Footer end  */
+
 @media (max-width: 480px) {
 
 
@@ -1797,13 +1793,6 @@ hr {
     margin-top: -90px;
     top: 13%;
   }
-
-  /* banner end  */
-  /* **************************RESPONSIVENESS */
-
-  /* .container {
-    width: 1100px;
-  } */
 
   /* header start */
 
@@ -2968,6 +2957,9 @@ hr {
 
 @media (max-width: 768px) {
   /* === Container === */
+  body html{
+    overflow-x: hidden;
+  }
   .container {
     max-width: 100%;
     padding-left: 12px;
@@ -3146,3 +3138,4 @@ hr {
     height: 40px;
   }
 }
+
